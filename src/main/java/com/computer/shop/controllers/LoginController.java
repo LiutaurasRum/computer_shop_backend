@@ -20,9 +20,8 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public boolean IsUserValid(String login, String password) {
-        Example<User> example = Example.of(createUser(login, password), credentialMatcher);
-        System.out.println(login);
+    public boolean IsUserValid(@RequestBody User user) {
+        Example<User> example = Example.of(user, credentialMatcher);
         return userRepository.exists(example);
     }
 
@@ -31,12 +30,5 @@ public class LoginController {
                 .withIgnorePaths("id")
                 .withMatcher("login", ignoreCase())
                 .withMatcher("password", ignoreCase());
-    }
-
-    private User createUser(final String userName, final String password) {
-        User user = new User();
-        user.setLogin(userName);
-        user.setPassword(password);
-        return user;
     }
 }
