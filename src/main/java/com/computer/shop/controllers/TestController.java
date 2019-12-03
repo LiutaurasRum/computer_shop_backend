@@ -1,7 +1,7 @@
-package com.pc.shop;
+package com.computer.shop.controllers;
 
-import com.pc.shop.models.Info;
-import com.pc.shop.repositories.InfoRepository;
+import com.computer.shop.models.Info;
+import com.computer.shop.repositories.InfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

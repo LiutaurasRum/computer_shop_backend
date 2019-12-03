@@ -1,4 +1,4 @@
-package com.pc.shop.models;
+package com.computer.shop.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
