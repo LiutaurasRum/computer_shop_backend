@@ -19,6 +19,7 @@ public class User implements Serializable {
     private String login;
     @NotBlank
     private String password;
+    private String email;
 
     public void setLogin(String login) {
         this.login = login;
@@ -26,5 +27,9 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
